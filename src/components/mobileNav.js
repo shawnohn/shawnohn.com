@@ -60,9 +60,9 @@ const MobileNav = () => {
             <div className="flex-grow">
               <Link to="/">HOME</Link>
             </div>
-            <div className="flex-grow">
+            {/* <div className="flex-grow">
               <Link to="/blog">BLOG</Link>
-            </div>
+            </div> */}
             <div className="flex-grow">
               <Link to="/projects">PROJECTS</Link>
             </div>
