@@ -1,6 +1,6 @@
 export default [
   {
-    // slug: 'https://jeffjadulco.com/',
+    slug: 'https://www.shawnohn.com/',
     title: 'shawnohn.com',
     description: 'My personal website made with React and Gatsby.',
     year: '2020',

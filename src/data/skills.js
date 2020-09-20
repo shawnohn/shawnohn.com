@@ -1,25 +1,35 @@
 export default [
   {
     label: 'Web Development Skills',
-    description: 'Skills I acquired and learned for full-stack web development',
+    description: 'Skills I acquired for full-stack web development',
     categories: [
       {
         title: 'Front-end Development',
         skills: [
-          'React: CRA, Gatsby, React-Native',
-          'Tailwind CSS and Component Libraries',
+          'React & CRA',
           'Jest & React Testing Library',
-          'Design Systems w/Storybook',
-          'SEO-friendly and Accessible Designs',
+          'Accessible Designs',
         ],
       },
       {
         title: 'Backend Development',
-        skills: ['Express', 'Socket.io', 'Firebase and Firestore'],
+        skills: ['Node & Express', 'Socket.io', 'JWT'],
       },
       {
-        title: 'Backend Development',
-        skills: ['Express', 'Socket.io', 'Firebase and Firestore'],
+        title: 'Database',
+        skills: ['MongoDB', 'MySQL', 'MSSQL'],
+      },
+      {
+        title: 'On Learning',
+        skills: [
+          'React-Native',
+          'Gatsby',
+          'GraphQL',
+          'Firebase',
+          'Tailwind CSS',
+          'Expo',
+          'Next',
+        ],
       },
     ],
   },
@@ -30,6 +40,10 @@ export default [
       {
         title: 'Unity Game Development',
         skills: ['C# Programming', 'Editor Tooling', 'Complex UI Systems'],
+      },
+      {
+        title: '3D & 2D Arts',
+        skills: ['Maya', 'SketchUp', 'Aseprite'],
       },
     ],
   },

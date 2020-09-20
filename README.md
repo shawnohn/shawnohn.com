@@ -1,4 +1,7 @@
+# [shawnohn.com](https://shawnohn.com)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a654f0c4-18d8-4b58-8698-e0273a46a2a4/deploy-status)](https://app.netlify.com/sites/shawnohn/deploys)
 
 My personal website running on Gatsby.
 
@@ -9,7 +12,7 @@ My personal website running on Gatsby.
 
 ## Author
 
-Shawn Ohn
+- [Shawn Ohn](https://shawnohn.com)
 
 ## License
 

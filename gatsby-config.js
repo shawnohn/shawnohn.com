@@ -5,8 +5,8 @@ module.exports = {
     author: `Shawn Ohn`,
     siteUrl:
       process.env.DEV_ENV === 1
-        ? `https://dev.jeffjadulco.com`
-        : `https://jeffjadulco.com`,
+        ? `https://dev.shawnohn.com`
+        : `https://shawnohn.com`,
     image: `/images/og-card.png`,
   },
   plugins: [
@@ -52,8 +52,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://jeffjadulco.com',
-        sitemap: 'https://jeffjadulco.com/sitemap.xml',
+        host: 'https://shawnohn.com',
+        sitemap: 'https://shawnohn.com/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }],
         env: {
           development: {
