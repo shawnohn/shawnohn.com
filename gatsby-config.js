@@ -1,57 +1,102 @@
 module.exports = {
   siteMetadata: {
-    title: `Prist | Gatsby & Prismic Starter`,
-        description: `A starter powered by Gatsby and Prismic to showcase portfolios and blogs.`,
-    author: `Marguerite Roth | marguerite.io`,
+    title: `Shawn Ohn`,
+    description: `Shawn Ohn is a full-stack developer`,
+    author: `Shawn Ohn`,
+    siteUrl:
+      process.env.DEV_ENV === 1
+        ? `https://dev.jeffjadulco.com`
+        : `https://jeffjadulco.com`,
+    image: `/images/og-card.png`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
+      },
+    },
     `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-image`,
-    `gatsby-plugin-catch-links`,
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-resolve-src`,
-    `gatsby-plugin-remove-trailing-slashes`,
-    `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/content/blog`,
+      },
+    },
+    'gatsby-image',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-        resolve: 'gatsby-source-prismic-graphql',
-        options: {
-            repositoryName: 'prist', // (REQUIRED, replace with your own)
-            linkResolver: () => post => `/${post.uid}`,
-        }
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-prismic-starter-prist`,
-        short_name: `prist`,
+        name: `Shawn Ohn`,
+        short_name: `Shawn Ohn`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#2d3748`,
+        theme_color: `#81E6D9`,
         display: `minimal-ui`,
-        icon: `src/images/oscar-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/logo-512x512.png`,
       },
     },
-    // https://www.gatsbyjs.org/packages/gatsby-plugin-google-analytics/
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-sitemap`,
     {
-        resolve: `gatsby-plugin-google-analytics`,
-        options: {
-            trackingId: "YOUR_GOOGLE_ANALYTICS_TRACKING_ID",
-            head: true,
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://jeffjadulco.com',
+        sitemap: 'https://jeffjadulco.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
+        env: {
+          development: {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+          },
+          production: {
+            policy: [{ userAgent: '*', allow: '/' }],
+          },
         },
+      },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        whitelist: [
+          'GATSBY_GOOGLE_SITE_VERIFICATION, GOOGLE_ANALYTICS_TRACKING_ID, DEV_ENV',
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-autolink-headers',
+            options: {
+              elements: [`h2`, `h3`],
+            },
+          },
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {},
+          },
+        ],
+      },
+    },
+    'gatsby-remark-autolink-headers',
   ],
 }

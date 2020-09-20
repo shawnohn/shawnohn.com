@@ -1,86 +1,56 @@
-const path = require('path');
+const path = require('path')
+const { createFilePath } = require('gatsby-source-filesystem')
 
-// graphql function doesn't throw an error so we have to check to check for the result.errors to throw manually
-const wrapper = promise =>
-    promise.then(result => {
-        if (result.errors) {
-            throw result.errors
-        }
-        return result
-    });
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
 
-exports.createPages = async ({ graphql, actions }) => {
-    const { createPage } = actions;
+  if (node.internal.type === 'Mdx') {
+    const value = createFilePath({ node, getNode })
 
-    const result = await wrapper(
-        graphql(`
-        {
-            prismic {
-                allProjects {
-                    edges {
-                        node {
-                            project_title
-                            project_preview_description
-                            project_preview_thumbnail
-                            project_category
-                            project_post_date
-                            _meta {
-                                uid
-                            }
-                        }
-                    }
-                }
-                allPosts {
-                    edges {
-                        node {
-                            post_title
-                            post_hero_image
-                            post_hero_annotation
-                            post_date
-                            post_category
-                            post_body
-                            post_preview_description
-                            post_author
-                            _meta {
-                                uid
-                            }
-                        }
-                    }
-                }
+    createNodeField({
+      name: 'slug',
+      node,
+      value: `/blog${value}`,
+    })
+  }
+}
+
+exports.createPages = async ({ graphql, actions, reporter }) => {
+  const { createPage } = actions
+
+  const result = await graphql(`
+    query {
+      allMdx {
+        edges {
+          node {
+            id
+            fields {
+              slug
             }
+            frontmatter {
+              seoImage
+            }
+          }
         }
-    `)
+      }
+    }
+  `)
+
+  if (result.errors) {
+    reporter.panicOnBuild('😱😱😱 ERROR: Loading "createPages" query')
+  }
+
+  const posts = result.data.allMdx.edges
+
+  posts.forEach(({ node }, index) => {
+    console.log(
+      `🍕 Dynamically creating page for ${node.fields.slug} with og-image ${node.frontmatter.seoImage}`
     )
 
-    const projectsList = result.data.prismic.allProjects.edges;
-    const postsList = result.data.prismic.allPosts.edges;
-
-    const projectTemplate = require.resolve('./src/templates/project.jsx');
-    const postTemplate = require.resolve('./src/templates/post.jsx');
-
-    projectsList.forEach(edge => {
-        // The uid you assigned in Prismic is the slug!
-        createPage({
-            type: 'Project',
-            match: '/work/:uid',
-            path: `/work/${edge.node._meta.uid}`,
-            component: projectTemplate,
-            context: {
-                // Pass the unique ID (uid) through context so the template can filter by it
-                uid: edge.node._meta.uid,
-            },
-        })
+    createPage({
+      path: node.fields.slug,
+      component: path.resolve(`./src/components/postLayout.js`),
+      context: { id: node.id, ogImageSlug: node.frontmatter.seoImage },
     })
-
-    postsList.forEach(edge => {
-        createPage({
-            type: 'Project',
-            match: '/blog/:uid',
-            path: `/blog/${edge.node._meta.uid}`,
-            component: postTemplate,
-            context: {
-                uid: edge.node._meta.uid,
-            },
-        })
-    })
+  })
 }
