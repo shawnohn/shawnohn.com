@@ -1,4 +1,4 @@
-@import url("https://rsms.me/inter/inter.css");
+@import url('https://rsms.me/inter/inter.css');
 
 :root {
   scroll-behavior: auto;
@@ -49,7 +49,11 @@
 .dark {
   --color-bg-accent: #81e6d9;
   --color-bg-primary: #1a202c;
+  /* --color-bg-primary: #001233; */
+
   --color-bg-secondary: #161b25;
+  /* --color-bg-secondary: #001845; */
+
   --color-bg-accent-hover: #4fd1c5;
 
   --color-text-accent: #81e6d9;
@@ -60,6 +64,7 @@
 
   --color-fill-primary: #81e6d9;
   --color-fill-secondary: #161b25;
+  /* --color-fill-secondary: #001845; */
 
   --color-gradient-accent1: rgba(49, 130, 206, 1);
   --color-gradient-accent2: rgba(79, 209, 197, 1);
@@ -77,9 +82,9 @@
   --color-code-regex: #ffb86c;
 }
 
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 body {
   transition: all 300ms ease 0s;
