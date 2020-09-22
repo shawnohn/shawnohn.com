@@ -29,13 +29,6 @@ function SEO({ description, lang, meta, title, blog, ogImage }) {
             }
           }
         }
-        blogImage: file(relativePath: { eq: "og-card-blog.png" }) {
-          childImageSharp {
-            fixed(width: 1280) {
-              src
-            }
-          }
-        }
       }
     `
   )
