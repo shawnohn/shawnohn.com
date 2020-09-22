@@ -52,7 +52,8 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "cross-env GATSBY_GRAPHQL_IDE=playground gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "debug": "node --no-lazy node_modules/.bin/gatsby develop --inspect-brk",
+    "format": "prettier --write \"**/*.{js,jsx,json,md,mdx}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
