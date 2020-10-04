@@ -4,7 +4,7 @@ export default [
     description: 'Skills I acquired for full-stack web development',
     categories: [
       {
-        title: 'Front-end Development',
+        title: 'Frontend Development',
         skills: [
           'React & CRA',
           'Jest & React Testing Library',
@@ -17,7 +17,7 @@ export default [
       },
       {
         title: 'Database',
-        skills: ['MongoDB', 'MySQL', 'MSSQL'],
+        skills: ['Microsoft SQL', 'MongoDB', 'MySQL', 'PostgreSQL'],
       },
       {
         title: 'On Learning',
