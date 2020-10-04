@@ -12,8 +12,15 @@ const About = (_) => {
         <article className="prose">
           <h2>About Me</h2>
           <p>
-            I'm Shawn Ohn, I'm breaking into job market in Canada as a
-            full-stack web developer. My goal is ...
+            During the fast years, I've worked as a .Net Software Developer(4
+            years) in developing an enterprise solution using .Net Framework(C#)
+            and Microsoft SQL Server in South Korea. After graduation with a
+            Master of Applied Computing at the University of Windsor, I worked
+            as an independent Unity Game Developer(1 year) and it has turned my
+            creative work as a game enthusiast. Now I'm breaking into the job
+            market in Canada as a Full-Stack Web Developer. I prefer JavaScript
+            frameworks to jump into the projects on going without hesitation and
+            to perform the best.
           </p>
         </article>
       </div>
