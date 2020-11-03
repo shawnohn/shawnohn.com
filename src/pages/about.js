@@ -12,17 +12,17 @@ const About = (_) => {
         <article className="prose">
           <h2>About Me</h2>
           <p>
-            During the fast years, I've worked as a .Net Software Developer(4
+            During the past years, I've worked as a .Net Software Developer(4
             years) in developing an enterprise solution using .Net Framework(C#)
             and Microsoft SQL Server in South Korea. After graduation with a
-            Master of Applied Computing at the University of Windsor, I worked
-            as an independent Unity Game Developer(1 year) and it has turned my
-            creative work as a game enthusiast.
+            Master of Applied Computing at the University of Windsor, I've been
+            working as an independent Unity Game Developer and as a Full Stack
+            Developer.
           </p>
           <p>
-            Now I'm breaking into the job market in Canada as a Full-Stack Web
-            Developer. I prefer JavaScript frameworks to jump into the projects
-            on going without hesitation and to perform the best.
+            Now I'm breaking into the job market to secure a full-time position
+            in Canada. I prefer JavaScript tech stacks and Unity to jump into
+            the ongoing projects without hesitation and to perform the best.
           </p>
         </article>
       </div>
