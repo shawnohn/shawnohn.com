@@ -16,6 +16,7 @@ export default [
     title: 'Home Consulting Inc.',
     description: 'Web Platform for Home Consulting Inc.',
     year: '2020',
+    links: [],
   },
   {
     slug: 'https://loving-sitter.herokuapp.com/',
