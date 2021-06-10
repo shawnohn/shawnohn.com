@@ -64,5 +64,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/shawnohn/shawnohn.com.git"
+  },
+  "resolutions": {
+    "sharp": "0.24.0"
   }
 }
