@@ -1,7 +1,7 @@
 export default [
   {
     label: 'Web Development Skills',
-    description: 'Skills I have acquired for Full-stack Developer',
+    description: 'Skills I have acquired for Full Stack Developer',
     categories: [
       {
         title: 'Front End Development',
@@ -14,7 +14,7 @@ export default [
       },
       {
         title: 'Back End Development',
-        skills: ['Node & Express', 'Firebase', 'Socket.io', 'JWT'],
+        skills: ['NodeJS', 'Firebase', 'Socket.io', 'JWT'],
       },
       {
         title: 'Database',
@@ -28,7 +28,7 @@ export default [
   },
   {
     label: 'Game Development Skills',
-    description: 'Skills I have learned for being Game Developer',
+    description: 'Skills I have learned for Game Development',
     categories: [
       {
         title: 'Unity Game Development',

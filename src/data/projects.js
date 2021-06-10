@@ -1,5 +1,6 @@
 export default [
   {
+    slug: 'https://heartcade.co/',
     title: 'Heartcade',
     description: 'Brand New Online Dating Experience.',
     year: '2021',
@@ -29,22 +30,6 @@ export default [
     ],
   },
   {
-    title: 'HitGrab.BlackJack',
-    description: 'Play classic Blackjack for free and win real cash prizes',
-    year: '2021',
-    links: [
-      {
-        label: 'App Store',
-        url: '',
-      },
-      {
-        label: 'Play Store',
-        url:
-          'https://play.google.com/store/apps/details?id=com.HitGrab.BlackJack',
-      },
-    ],
-  },
-  {
     slug: 'https://icontribute.community/#/',
     title: 'iContribute',
     description: 'Connecting students to volunteer opportunities',
@@ -57,11 +42,33 @@ export default [
     ],
   },
   {
+    title: 'BlackJack',
+    description: 'Play classic Blackjack for free and win real cash prizes',
+    year: '2020',
+    links: [
+      {
+        label: 'App Store',
+        url: 'https://apps.apple.com/ca/app/blackjack/id1170103060',
+      },
+      {
+        label: 'Play Store',
+        url:
+          'https://play.google.com/store/apps/details?id=com.HitGrab.BlackJack',
+      },
+    ],
+  },
+
+  {
     slug: 'https://homeconsulting-web.herokuapp.com/',
     title: 'Home Consulting Inc.',
-    description: 'A beta version of Web Platform for Home Consulting Inc.',
+    description: 'A beta version of service platform for Home Consulting Inc.',
     year: '2020',
-    links: [],
+    links: [
+      {
+        label: 'Home',
+        url: 'https://homeconsulting-web.herokuapp.com/',
+      },
+    ],
   },
   {
     slug: 'https://loving-sitter.herokuapp.com/',
