@@ -1,19 +1,20 @@
 export default [
   {
     label: 'Web Development Skills',
-    description: 'Skills I acquired for full-stack web development',
+    description: 'Skills I have acquired for Full-stack Developer',
     categories: [
       {
-        title: 'Frontend Development',
+        title: 'Front End Development',
         skills: [
-          'React & CRA',
+          'Flutter',
+          'React & Redux',
           'Jest & React Testing Library',
           'Accessible Designs',
         ],
       },
       {
-        title: 'Backend Development',
-        skills: ['Node & Express', 'Socket.io', 'JWT'],
+        title: 'Back End Development',
+        skills: ['Node & Express', 'Firebase', 'Socket.io', 'JWT'],
       },
       {
         title: 'Database',
@@ -21,21 +22,13 @@ export default [
       },
       {
         title: 'On Learning',
-        skills: [
-          'React-Native',
-          'Gatsby',
-          'GraphQL',
-          'Firebase',
-          'Tailwind CSS',
-          'Expo',
-          'Next',
-        ],
+        skills: ['CI/CD Automations', 'Blazor', 'Gatsby', 'GraphQL'],
       },
     ],
   },
   {
     label: 'Game Development Skills',
-    description: 'Skills I learned ',
+    description: 'Skills I have learned for being Game Developer',
     categories: [
       {
         title: 'Unity Game Development',
