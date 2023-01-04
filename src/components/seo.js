@@ -44,7 +44,7 @@ function SEO({ description, lang, meta, title, blog, ogImage }) {
     title: title || defaultTitle,
     titleTemplate: title
       ? `%s | ${defaultTitle}`
-      : `${defaultTitle} | Full-Stack JavaScript Developer`,
+      : `${defaultTitle} | Full stack Developer`,
     description: description || defaultDescription,
     image: `${siteUrl}${
       blog

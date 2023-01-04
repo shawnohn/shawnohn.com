@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Shawn Ohn`,
-    description: `Shawn Ohn is a full-stack developer`,
+    description: `Shawn Ohn is a Full stack developer`,
     author: `Shawn Ohn`,
     siteUrl:
       process.env.DEV_ENV === 1
