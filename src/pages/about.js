@@ -12,18 +12,22 @@ const About = (_) => {
         <article className="prose">
           <h2>About Me</h2>
           <p>
-            During the past years, I've worked as a Software Developer(4 years)
-            in developing an enterprise solution using WPF .Net Framework(C#)
-            and Microsoft SQL Server in South Korea. After graduation with a
-            Master of Applied Computing at the University of Windsor, I've been
-            working as a Full Stack developer and an independent Unity Game
-            Developer.
+            I’m a Software Engineer with experience across automotive, smart
+            infrastructure, gaming, and healthcare industries, specializing in
+            full-stack development, system architecture, cloud infrastructure,
+            and DevOps.
           </p>
           <p>
-            Now I'm breaking into the job market to secure a Permanent Full-time
-            position in Canada. I prefer JavaScript tech stacks and Unity to
-            jump into the ongoing projects without hesitation and to perform the
-            best.
+            I have developed ERP systems to streamline automotive business
+            processes, built a parking data platform, led full-stack development
+            of a .NET Framework app for healthcare, and modernized legacy
+            components.
+          </p>
+          <p>
+            I enjoy solving complex problems, improving system efficiency, and
+            collaborating with teams to build high-quality software. Always
+            eager to learn and grow, I strive to create impactful and efficient
+            solutions.
           </p>
         </article>
       </div>
